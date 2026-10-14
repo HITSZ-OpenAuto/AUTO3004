@@ -1,11 +1,5 @@
 # AUTO3004 - 系统建模与仿真
 <!-- TOML-META: repo_type="normal" -->
-<!-- TOML-BADGES: source="grades_summary" -->
-
-![成绩构成](https://img.shields.io/badge/成绩构成-gold)
-![作业20%](https://img.shields.io/badge/作业-20%25-wheat)
-![实验20%](https://img.shields.io/badge/实验-20%25-wheat)
-![期末考试60%](https://img.shields.io/badge/期末考试-60%25-wheat)
 
 系统建模与仿真课程资料，包含授课教师评价、课程内容分析及考试攻略。
 
