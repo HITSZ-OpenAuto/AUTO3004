@@ -1,10 +1,10 @@
 course_name = "系统建模与仿真"
-repo_type = "normal"
 course_code = "AUTO3004"
-
+repo_type = "normal"
 description = "系统建模与仿真课程资料，包含授课教师评价、课程内容分析及考试攻略。"
 
 [lecturers]
+
 [[lecturers.items]]
 name = "李衍杰"
 
@@ -15,6 +15,7 @@ content = """
 听课建议：注意重点强调的最小二乘，PPT 标红简答，龙格库塔法计算。
 """
 author = { name = "phychi", link = "https://github.com/phychi", date = "2023-11" }
+
 [[lecturers.items]]
 name = "李芃"
 
@@ -24,6 +25,7 @@ content = """
 听课建议：正常听课，考前复习。
 """
 author = { name = "phychi", link = "https://github.com/phychi", date = "2023-11" }
+
 [[sections]]
 title = "课程内容"
 
