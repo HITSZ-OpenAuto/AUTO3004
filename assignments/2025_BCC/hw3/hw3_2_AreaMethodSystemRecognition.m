@@ -1,0 +1,107 @@
+% 产生传递函数
+Ts = 0.0001; Tf = 60;
+t = 0:Ts:Tf;
+num = 1;
+den = [6,12,3,1];
+G = tf(num,den)
+
+%（1）使用step函数产生该系统的阶跃响应，并在响应曲线中加入不同方差的高斯白噪声。
+[stepImpulse, t] = step(G,t);
+noise1 = randn(size(stepImpulse));
+noise2 = randn(size(stepImpulse));
+stepImpulseWithNoise1 = stepImpulse + noise1 * 0.02;  % 标准差0.02
+stepImpulseWithNoise2 = stepImpulse + noise2 * 0.1;  % 标准差0.1
+% 画出图像
+figure;
+plot(t,stepImpulse);
+legend('原始阶跃响应');
+xlabel('t');
+ylabel('y');
+
+figure;
+plot(t,stepImpulseWithNoise1);
+legend('叠加标准差为0.02的高斯白噪声的阶跃响应');
+xlabel('t');
+ylabel('y');
+
+
+figure;
+plot(t,stepImpulseWithNoise2);
+legend('叠加标准差为0.1的高斯白噪声的阶跃响应');
+xlabel('t');
+ylabel('y');
+
+
+%（2）利用产生的阶跃响应通过面积法辨识得到传递函数中的参数。
+% K = y(inf), 但是为了防止抖动，取最后的20%的数据的平均值为稳态
+num_points = length(t);
+ss_index_start = round(num_points * 0.8);
+K = mean(stepImpulse(ss_index_start:end));  % 真实的增益K
+K1 = mean(stepImpulseWithNoise1(ss_index_start:end));  % 标准差0.02, 观测出的增益K1
+K2 = mean(stepImpulseWithNoise2(ss_index_start:end));  % 标准差0.1, 观测出的增益K2
+% 使用各自估计的K值先进行归一化，确保稳态值都是1
+h_star = stepImpulse / K;
+h_star1 = stepImpulseWithNoise1 / K1;
+h_star2 = stepImpulseWithNoise2 / K2;
+% 分母次数 n=3, 分子次数 m =0, 所以需要计算 m+n = 3阶面积
+
+% 使用基于矩Mi的计算方法，则需要计算M0,M1,M2
+
+% 先用无白噪声的响应做一次辨识
+% 直接带入Mi的计算公式 M0,M1,M2对应M0[1],M0[2],M0[3]
+for i = 0:2
+    M0(i+1) = trapz(t,(1-h_star).*((-t).^i)./factorial(i));
+end
+% 根据递推公式计算出各阶面积Ai
+A0(1) = M0(1);
+A0(2) = M0(2) + A0(1).*M0(1);
+A0(3) = M0(3) + A0(1).*M0(2) + A0(2).*M0(1);
+% 用面积法的公式，就可以计算出分母系数矩阵a，分子系数矩阵b
+% 这里由于分子系数矩阵b是0，由公式可以简化出来a=A
+a0 = A0;
+den0 = [flip(A0), 1];
+G0 = tf(K,den0)  % 无白噪声的辨识出的传递函数
+
+% 首先计算标准差0.02的
+% 直接带入Mi的计算公式 M0,M1,M2对应M1[1],M1[2],M1[3]
+for i = 0:2
+    M1(i+1) = trapz(t,(1-h_star1).*((-t).^i)./factorial(i));
+end
+% 根据递推公式计算出各阶面积Ai
+A1(1) = M1(1);
+A1(2) = M1(2) + A1(1).*M1(1);
+A1(3) = M1(3) + A1(1).*M1(2) + A1(2).*M1(1);
+% 用面积法的公式，就可以计算出分母系数矩阵a，分子系数矩阵b
+% 这里由于分子系数矩阵b是0，由公式可以简化出来a=A
+a1 = A1;
+den1 = [flip(A1), 1];
+G1 = tf(K1,den1)  % 标准差0.02对应的辨识出的传递函数
+
+% 然后计算标准差0.1的
+% 直接带入Mi的计算公式 M0,M1,M2对应M2[1],M2[2],M2[3]
+for i = 0:2
+    M2(i+1) = trapz(t,(1-h_star2).*((-t).^i)./factorial(i));
+end
+% 根据递推公式计算出各阶面积Ai
+A2(1) = M2(1);
+A2(2) = M2(2) + A2(1).*M2(1);
+A2(3) = M2(3) + A2(1).*M2(2) + A2(2).*M2(1);
+% 用面积法的公式，就可以计算出分母系数矩阵a，分子系数矩阵b
+% 这里由于分子系数矩阵b是0，由公式可以简化出来a=A
+a2 = A2;
+den2 = [flip(A2), 1];
+G2 = tf(K2,den2)  % 标准差0.02对应的辨识出的传递函数
+
+% 分别画出三个阶跃响应曲线
+stepRecogG0 = step(G0,t);
+stepRecogG1 = step(G1,t);
+stepRecogG2 = step(G2,t);
+figure;
+plot(t,stepImpulse);
+hold;
+plot(t,stepRecogG0);
+plot(t,stepRecogG1);
+plot(t,stepRecogG2);
+legend('原始阶跃响应','由无噪声响应辨识出的结果','由标准差0.02的高斯噪声的响应辨识出的结果','由标准差0.1的高斯噪声辨识出的结果');
+xlabel('t');
+ylabel('y');
