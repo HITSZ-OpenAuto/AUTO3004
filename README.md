@@ -27,6 +27,12 @@
 
 > 文 / [phychi](https://github.com/phychi)，2023-11
 
+<!-- TOML-ITEM: id="item-课程内容-bcc-2025" -->
+
+系统辨识部分建议参考教材《系统辨识理论及应用》（李言俊、张科编著，国防工业出版社）第 1—6 章。
+
+> 文 / [BCC](https://github.com/BCCHIT)，2026-11
+
 ## 关于考试
 <!-- TOML-SECTION: title="关于考试" -->
 
@@ -49,6 +55,12 @@
 24 年秋，考试可以带计算器。
 
 > 文 / [psp_dada](https://github.com/pspdada)，2024-11
+
+<!-- TOML-ITEM: id="item-关于考试-bcc-2025" -->
+
+25 年秋，考试非常简单，学过《系统与控制》即可拿下不少分数。课程最难的部分，如最小二乘辨识、极大似然估计法，基本都没有考察，课件中递推公式这种难度的完全没有，不需要浪费时间。建议复习好往年试卷，大题题型比较稳定。
+
+> 文 / [BCC](https://github.com/BCCHIT)，2026-11
 
 ## 关于实验
 <!-- TOML-SECTION: title="关于实验" -->
