@@ -33,6 +33,10 @@ title = "课程内容"
 content = "课程内容可以分为三个部分：① 纯科普 ② 告诉你在以后遇到问题了可以用某个方法，但是因为复杂等原因不方便考 ③ 剩下才是能考试的核心内容。不要因为有的内容听不懂就灰心甚至摆烂。"
 author = { name = "phychi", link = "https://github.com/phychi", date = "2023-11" }
 
+[[sections.items]]
+content = "系统辨识部分建议参考教材《系统辨识理论及应用》（李言俊、张科编著，国防工业出版社）第 1—6 章。"
+author = { name = "BCC", link = "https://github.com/BCCHIT", date = "2026-11" }
+
 [[sections]]
 title = "关于考试"
 
@@ -51,6 +55,10 @@ content = """
 24 年秋，考试可以带计算器。
 """
 author = { name = "psp_dada", link = "https://github.com/pspdada", date = "2024-11" }
+
+[[sections.items]]
+content = "25 年秋，考试非常简单，学过《系统与控制》即可拿下不少分数。课程最难的部分，如最小二乘辨识、极大似然估计法，基本都没有考察，课件中递推公式这种难度的完全没有，不需要浪费时间。建议复习好往年试卷，大题题型比较稳定。"
+author = { name = "BCC", link = "https://github.com/BCCHIT", date = "2026-11" }
 
 [[sections]]
 title = "关于实验"
