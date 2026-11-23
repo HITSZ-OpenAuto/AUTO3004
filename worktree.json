@@ -10,9 +10,9 @@
     "hash": "f4f10ecb10c54c3a74b7815e64027d7b41cb52ea"
   },
   "README.md": {
-    "size": 2473,
-    "time": 1791961112,
-    "hash": "91f546b4a31c17ba3d84105696b136fa5c4ad98f"
+    "size": 3127,
+    "time": 1795393368,
+    "hash": "c0c1fb6ce1753dbf5483919c2fbc9af0c15691d2"
   },
   "assignments/.gitkeep": {
     "size": 0,
@@ -58,6 +58,81 @@
     "size": 101993,
     "time": 1734684685,
     "hash": "b5c9338cd360c57090819d801f74126aeeba3e7a"
+  },
+  "assignments/2025_BCC/hw1/Homework1.mlx": {
+    "size": 6253,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw1/作业1.pdf": {
+    "size": 120619,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw2/hw2_GaussianDistributionSequence.m": {
+    "size": 730,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw2/作业2.pdf": {
+    "size": 688202,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw2/作业2_Figure1.jpg": {
+    "size": 256244,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw2/作业2_Figure2.jpg": {
+    "size": 154630,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw3/hw3_1_LeastSquareSystemRecognition.m": {
+    "size": 373,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw3/hw3_2_AreaMethodSystemRecognition.asv": {
+    "size": 3133,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw3/hw3_2_AreaMethodSystemRecognition.m": {
+    "size": 3843,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw3/作业3.pdf": {
+    "size": 960722,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw4/hw4_1.slx": {
+    "size": 84455,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw4/hw4_2_1.slx": {
+    "size": 93896,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw4/hw4_2_2.slx": {
+    "size": 88374,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw4/hw4_3.slx": {
+    "size": 100390,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "assignments/2025_BCC/hw4/作业4.pdf": {
+    "size": 1529393,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
   },
   "exams/.gitkeep": {
     "size": 0,
@@ -189,6 +264,21 @@
     "time": 1734684685,
     "hash": "b5c9338cd360c57090819d801f74126aeeba3e7a"
   },
+  "labs/2025_BCC/Exp/直线一级倒立摆实验报告.pdf": {
+    "size": 2871278,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "labs/2025_BCC/Lab2/Report.pdf": {
+    "size": 666267,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
+  "labs/2025_BCC/Lab3/Report.pdf": {
+    "size": 1272052,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
   "notes/2022-tlb-系统建模与仿真Revision.pdf": {
     "size": 383881,
     "time": 1737559525,
@@ -204,10 +294,15 @@
     "time": 1766334334,
     "hash": "579b61a04b276b10a5128db38ca3afa55f4cbaa9"
   },
+  "notes/BCC_系统辨识笔记.pdf": {
+    "size": 31387862,
+    "time": 1795393346,
+    "hash": "70936ed482c60ddb67ee330ce15d4cafe1d6c24f"
+  },
   "readme.toml": {
-    "size": 2549,
-    "time": 1791961126,
-    "hash": "3a9f6b7517e59ba15ebb2a1737e2780f72345ce6"
+    "size": 3229,
+    "time": 1795393368,
+    "hash": "c0c1fb6ce1753dbf5483919c2fbc9af0c15691d2"
   },
   "slides/2024-带笔记-psp/1 系统建模概述.pdf": {
     "size": 2395988,
